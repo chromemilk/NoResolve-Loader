@@ -1,0 +1,39 @@
+﻿<Window x:Class="NoResolve_Loader.MainWindow"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="NoResolve.cc" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="{DynamicResource MaterialDesignPaper}"
+        xmlns:local="clr-namespace:NoResolve_Loader"
+        mc:Ignorable="d">
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="731*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <materialDesign:Card Margin="16,16,16,16" Grid.Row="0" Padding="16" Grid.ColumnSpan="3">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <TextBlock Text="NoResolve Loader" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}" Margin="0,0,16,0"/>
+                <Button Content="Exit" Width="75" Height="35" VerticalAlignment="Center" Click="CloseButton_Click"/>
+            </StackPanel>
+        </materialDesign:Card>
+
+        <materialDesign:Card Margin="16,16,16,16" Grid.Row="1" Padding="16" Grid.ColumnSpan="3">
+            <StackPanel>
+                <Button Content="Load External" Height="45" Margin="0,10,0,0" Click="LoadCheat_Click"/>
+                <Button Content="Inject Internal" Height="45" Margin="0,10,0,0" Click="InjectCheat_Click"/>
+                <Button Content="VAC Bypass" Height="45" Margin="0,10,0,0" Click="VACBypass_Click"/>
+
+            </StackPanel>
+        </materialDesign:Card>
+    </Grid>
+</Window>
